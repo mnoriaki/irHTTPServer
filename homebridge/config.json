@@ -1,0 +1,67 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "B8:27:EB:C9:53:C2",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+
+    "description": "HomeBridge HTTP Status Control",
+
+    "accessories": [ {
+	        "accessory": "Http",
+                "name": "明かり",
+			"switchHandling": "realtime",
+				"http_method": "GET",
+				"on_url":      "http://localhost:8000/OCR04/ON",
+				"off_url":     "http://localhost:8000/OCR04/OFF",
+			"service": "Light",
+				"brightnessHandling": "no"
+       },
+	{
+	        "accessory": "Http",
+                "name": "エアコン",
+			"switchHandling": "realtime",
+				"http_method": "GET",
+				"on_url":      "http://localhost:8000/A/23CB260100204C0630D800000000100400A3",
+				"off_url":     "http://localhost:8000/A/23CB26010000480630F8000000001004009F",
+			"service": "Switch"
+	}, 
+	{
+	        "accessory": "Http",
+                "name": "レコーダ",
+			"switchHandling": "realtime",
+				"http_method": "GET",
+				"on_url":      "http://localhost:8000/RD/ON",
+				"off_url":     "http://localhost:8000/RD/OFF",
+			"service": "Switch"
+	},
+	{
+	        "accessory": "Http",
+                "name": "ラジオ",
+			"switchHandling": "realtime",
+				"http_method": "GET",
+				"on_url":      "http://localhost:8000/intec/fm",
+				"off_url":     "http://localhost:8000/intec/off",
+			"service": "Switch"
+	},
+	{
+	        "accessory": "Http",
+                "name": "FM",
+			"switchHandling": "realtime",
+				"http_method": "GET",
+				"on_url":      "http://localhost:8000/intec/fm",
+				"off_url":     "http://localhost:8000/intec/off",
+			"service": "Switch"
+	},
+	{
+	        "accessory": "Http",
+                "name": "AM",
+			"switchHandling": "realtime",
+				"http_method": "GET",
+				"on_url":      "http://localhost:8000/intec/am",
+				"off_url":     "http://localhost:8000/intec/off",
+			"service": "Switch"
+	}
+    ]
+}
