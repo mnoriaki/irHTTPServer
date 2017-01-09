@@ -27,3 +27,7 @@ Please read the script to see how to modify for your application.
 ## Running the script
 Addition to the IR remote module, you need Python serial and tornado modules. 
 You also need fswebcam if you want to take picture with a USB camera.
+
+## homebridge
+This HTTP server can use with homebridge (homebridge-http module). 
+Example config.json file is shown in homebridge/config.json .
