@@ -13,8 +13,10 @@ This HTTP server is written in Python using tornado HTTP server module. It can s
 
 It also send wake on LAN packet by
 - http://localhost:8000/RD/ON (turn on a Toshiba BD/HDD recorder)
-or turn of the recorder by 
+
+or turn off the recorder by 
 - http://localhost:8000/RD/OFF (turn off a Toshiba BD/HDD recorder through web interface)
+
 or capture an image by USB camera
 - http://localhost:8000/web
 
